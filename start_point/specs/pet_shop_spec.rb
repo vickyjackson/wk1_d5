@@ -178,8 +178,9 @@ class TestPetShop < Minitest::Test
     assert_equal(true, can_buy_pet)
   end
 
-  # #These are 'integration' tests so we want multiple asserts.
-  # #If one fails the entire test should fail
+#These are 'integration' tests so we want multiple asserts.
+#If one fails the entire test should fail
+
   def test_sell_pet_to_customer__pet_found
     customer = @customers[0]
     pet = find_pet_by_name(@pet_shop,"Arthur")
@@ -214,5 +215,8 @@ class TestPetShop < Minitest::Test
     assert_equal(50, customer_cash(customer))
     assert_equal(1000, total_cash(@pet_shop))
   end
-
 end
+
+## Other good tests!
+### 1. what if someone tries to buy a pet that has already been sold?
+### 2. what if the data being passed in is not what we expect?
